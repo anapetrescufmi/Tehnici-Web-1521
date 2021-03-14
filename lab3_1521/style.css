@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+  
+  html {
+    font-family: "Lucida Sans", sans-serif;
+  }
+  
+  /* .container {
+    display: grid;
+    grid-template-columns: 25% auto 25%;
+  } */
+
+  .header {
+    background-color: #9933cc;
+    color: #ffffff;
+    padding: 15px;
+    grid-area: header;
+  }
+
+  .menu {
+    grid-area: menu;
+  }
+
+  .menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: #33b5e5;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  }
+  
+  .menu li:hover {
+    background-color: #0099cc;
+  }
+  
+  .aside {
+    background-color: #33b5e5;
+    padding: 15px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    grid-area: aside;
+  }
+  
+  .footer {
+    background-color: #0099cc;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+    grid-area: footer;
+  }
+
+  .text {
+    grid-area: text;
+  }
+
+  /* @media only screen and (max-width: 700px) {
+    .aside {
+      grid-column-start: 1;
+      grid-column-end: 4;
+    }
+
+    .text {
+      grid-column-start: 2;
+      grid-column-end: 4;
+    }
+  } */
+
+  /* @media only screen and (max-width: 450px) {
+    .menu {
+      grid-column-start: 1;
+      grid-column-end: 4;
+    }
+
+    .text {
+      grid-column-start: 1;
+    }
+  } */
+
+  .container {
+    display: grid;
+    grid-template-areas: 'header header header header'
+    'menu text text aside'
+    'footer footer footer footer';
+  }
+
+  @media only screen and (max-width: 700px) {
+    .container {
+      grid-template-areas: 'header header header header'
+      'menu text text text'
+      'aside aside aside aside'
+      'footer footer footer footer';
+    }
+
+    @media only screen and (max-width: 450px) {
+      .container {
+        grid-template-areas: 'header header'
+        'menu menu'
+        'text text'
+        'aside aside'
+        'footer footer';
+      }
+  }
+}

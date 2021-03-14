@@ -1,0 +1,83 @@
+/*
+// Clasa
+ .container {
+    background-color: blue;
+}
+// All elements
+* {
+    color: grey !important;
+}
+
+//Id
+#containerB {
+    background-color: purple;
+}
+
+//Style pe tag
+div { 
+    text-align: center;
+    font-size: 10px;
+    font-weight: 900;
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+    color: red;
+}
+
+#main {
+    background-color: rgba(67, 173, 173, 0.246);
+    color: white;
+    border-color: green;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+#containerA {
+    background-color: orange;
+    display: none;
+} */
+
+#main {
+    color: black;
+}
+
+/* Pune color-ul pe toate elementele cu clasele insirate */
+.containerA, 
+.containerB,
+.containerF {
+    color: blue;
+}
+
+/*
+//Pune style-ul pe elementele cu clasa containerC care sunt copii a elementului cu id-ul main
+//Practic folosim asta cand vrem sa specificam un path exact in DOM pentru care vrem sa definim un anumit stil
+ #main .containerC {
+    color: aqua;
+} */
+
+/* .containerC > .containerA {
+    background-color: orange;
+} */
+
+/* .containerA ~ .containerD {
+    background-color: aqua;
+} */
+
+/*:nth-of-type() Toate elementele cu clasa container si cu pozitia in DOM pentru care exista un n astfel incat pozitia = 3n
+.container:nth-of-type(3n){
+    background-color: aqua;
+}
+/* La fel ca la :nth-of-type() doar ca se refera la copiii elementului cu clasa containerA */
+/* 
+.containerA:nth-child(2n) {
+    background-color: orange;
+} */
+/* Hover -> cand mergem cu cursorul peste un element */
+.container:hover {
+    background-color: orange;
+}
+
+/* Cand delimitarea se face prin atributele pe care le are elementul */
+input[type="radio"] {
+    padding-left: 100px;
+}
