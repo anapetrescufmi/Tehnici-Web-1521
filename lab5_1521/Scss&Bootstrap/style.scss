@@ -1,0 +1,9 @@
+@import './variables';
+
+.classA {
+    .classB {
+        width: $width;
+        height: $height;
+        background-color: $color;
+    }
+}
